@@ -133,7 +133,11 @@ def add_background(frame):
         messagebox.showerror("Error", f"Gagal memuat gambar latar: {e}")
 
 
-
+# Konfigurasi jendela utama
+root = tk.Tk()
+root.title("Projek Statistik Terapan")
+root.geometry("1200x800")
+root.resizable(True,True)
 
 
 # Muat gambar background
@@ -197,7 +201,7 @@ for menu_name in menu_items:
         bg="#76c893",
         fg="black",
         relief="groove",
-        width=50,
+        width=50, 
         pady=5,
         command=lambda m=menu_name: tampilkan_submenu(m, frame_submenu)
     ).pack(pady=10)
